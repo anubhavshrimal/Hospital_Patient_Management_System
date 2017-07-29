@@ -12,15 +12,18 @@ export class AuthenticateUserService {
   };
   userChange$: Observable<any>;
   private _observer: Observer<any>;
+
   constructor() {
     this.userChange$ = new Observable(observer =>
       this._observer = observer).share();
     // share() allows multiple subscribers
   }
+
   changeUser(user) {
     this.user = user;
     this._observer.next(user);
   }
+  
   getUser() {
     return this.user;
   }
