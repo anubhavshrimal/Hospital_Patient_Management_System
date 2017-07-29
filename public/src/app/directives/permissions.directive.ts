@@ -2,7 +2,8 @@ import { Directive, Input, ElementRef, OnInit, OnDestroy } from '@angular/core';
 import { AuthenticateUserService } from '../services/authenticate-user.service';
 
 @Directive({
-  selector: '[permissions]'
+  selector: '[permissions]',
+  providers: [AuthenticateUserService]
 })
 export class PermissionsDirective implements OnInit, OnDestroy {
   @Input() permissions: Array<string>;
