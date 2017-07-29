@@ -10,6 +10,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PermissionsDirective } from './directives/permissions.directive';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PatientSummaryComponent } from './components/patient-summary/patient-summary.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     SignupComponent,
     PermissionsDirective,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    PatientSummaryComponent
   ],
   imports: [
     AppRoutingModule,
