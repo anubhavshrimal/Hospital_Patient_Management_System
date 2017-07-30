@@ -16,16 +16,33 @@
             </div>
           </div>
 
-          <div class='row'>
-            <div class='input-field col s12'>
-              <input class='validate' [(ngModel)]="patientlogin.email" type='email' name='email' id='email' />
-              <label for='email'>Enter your email</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <select materialize="material_select" id="utype" [(ngModel)]="userlogin.userType">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="p">Patient</option>
+                <option value="d">Doctor</option>
+                <option value="a">Admin</option>
+                <option value="r">Receptionist</option>
+                <option value="c">Compounder</option>
+              </select>
+
+              <label>Login As</label>
             </div>
           </div>
 
           <div class='row'>
             <div class='input-field col s12'>
-              <input class='validate' type='password' [(ngModel)]="patientlogin.password" name='password' id='password' />
+              <input class='validate' [(ngModel)]="userlogin.userName" type='email' name='email' id='email' />
+              <label for='email'>UserName</label>
+            </div>
+          </div>
+
+
+
+          <div class='row'>
+            <div class='input-field col s12'>
+              <input class='validate' type='password' [(ngModel)]="userlogin.password" name='password' id='password' />
               <label for='password'>Enter your password</label>
             </div>
             <label style='float: right;'>

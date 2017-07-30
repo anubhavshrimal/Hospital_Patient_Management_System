@@ -15,10 +15,11 @@ export class PostService {
 
   }
   login(pdetails:any){
+    console.log(pdetails);
     let form=new FormData();
-    form=this.createFormData(pdetails)
+    form=this.createFormData(pdetails);
     let header=new Headers()
-    return this.http.post('http://192.168.1.103:3000/',form,{headers:header});
+    return this.http.post('http://192.168.1.103:3000/login',form,{headers:header});
   }
 
   createFormData(object: Object, form?: FormData, namespace?: string): FormData {

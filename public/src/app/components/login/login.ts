@@ -1,10 +1,12 @@
 
 export class PatientLogin {
-  email: string;
+  userName: string;
   password: string;
+  userType:any;
 
   constructor() {
-    this.email = '';
+    this.userName = '';
     this.password = '';
+    this.userType='';
   }
 }
