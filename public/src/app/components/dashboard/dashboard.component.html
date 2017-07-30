@@ -2,14 +2,16 @@
   <div class="row">
     <div class="col s12 m6 offset-l1">
       <div class="row">
-        <div class="col s12 m6" routerLink="/login">
+        <div class="col s12 modal-trigger" href="#modal1">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text center-align">
-              <span class="card-title ">Prescription</span>
+              <span class="card-title">Patient Prescriptions</span>
             </div>
           </div>
         </div>
-        <div class="col s12 m6" routerLink="/login">
+      </div>
+      <div class="row">
+        <div class="col s12" routerLink="/login">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title  center-align">My Profile</span>
@@ -18,17 +20,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m6" routerLink="/login">
+        <div class="col s12" class="col s12 modal-trigger" href="#modal2">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text center-align">
               <span class="card-title ">Apply for Leave</span>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6" routerLink="/login">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title  center-align">Tutorials</span>
             </div>
           </div>
         </div>
@@ -36,32 +31,107 @@
     </div>
 
     <div class="col s12 m5">
-      <ul class="collection" style="overflow: scroll; height: 200px">
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Dr. Deepak Lahoty</span>
-          <p>Cardiologist <br> 30/07/2017
-          </p>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle">folder</i>
-          <span class="title">Title</span>
-          <p>First Line <br> Second Line
-          </p>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle green">insert_chart</i>
-          <span class="title">Title</span>
-          <p>First Line <br> Second Line
-          </p>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle red">play_arrow</i>
-          <span class="title">Title</span>
-          <p>First Line <br> Second Line
-          </p>
-        </li>
-      </ul>
+      <div class="row" permissions="['c', 'r']">
+        <select materialize="material_select">
+          <option value="" disabled selected>Choose Doctor name</option>
+          <option value="" data-icon="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46" class="left circle">example 1</option>
+          <option value="" data-icon="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46" class="left circle">example 2</option>
+          <option value="" data-icon="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46" class="left circle">example 3</option>
+        </select>
+      </div>
+      <div class="row">
+        <ul class="collection" style="overflow: scroll; height: 450px">
+          <li class="collection-item avatar">
+            <img src="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46"
+              alt="" class="circle">
+            <span class="title">Dr. Deepak Lahoty</span>
+            <p>Cardiologist <br> 30/07/2017
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">folder</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">folder</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">folder</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Title</span>
+            <p>First Line <br> Second Line
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- Modal Structure for patient prescription-->
+<div materialize="modal" id="modal1" class="modal">
+  <div class="modal-content">
+    <h5>Scan QR-Code</h5>
+    <div class="input-field col s6">
+      <input id="patient-uname" type="text">
+      <label for="patient-uname">Type patient username</label>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a routerLink="/patient-summary" class="modal-action modal-close waves-effect waves-green btn-flat">Next</a>
+  </div>
+</div>
+
+<!-- Modal Structure for Apply for Leave-->
+<div materialize="modal" id="modal2" class="modal">
+  <div class="modal-content">
+    <h5>Select leave date</h5>
+    <p>Select a date and we'll reschedule your appointments for that day.</p>
+    <div class="input-field col s6">
+      <input id="leave-date" type="date">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a (click)="applyLeave()" class="modal-action modal-close waves-effect waves-green btn-flat">Accept</a>
   </div>
 </div>
