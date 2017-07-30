@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { NewPrescriptionComponent } from "./components/new-prescription/new-prescription.component";
 import { PatientSummaryComponent } from './components/patient-summary/patient-summary.component';
 import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'patient-summary/:uname',
         component: PatientSummaryComponent
+    },
+    {
+        path: 'prescription/:recordId',
+        component: NewPrescriptionComponent
     }
 ];
 
