@@ -8,7 +8,7 @@ export class AuthenticateUserService {
 
   private user = {
     'name': 'Anubhav',
-    'type': 'p'
+    'userType': 'd'
   };
   userChange$: Observable<any>;
   private _observer: Observer<any>;

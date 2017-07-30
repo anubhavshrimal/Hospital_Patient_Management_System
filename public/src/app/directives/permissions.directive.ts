@@ -30,7 +30,7 @@ export class PermissionsDirective implements OnInit, OnDestroy {
 
   check_permissions() {
     let i, permit = false;
-    if (this.permissions.indexOf(this.user.type) >= 0)
+    if (this.permissions.indexOf(this.user.userType) >= 0)
     { 
       permit = true;
     }
