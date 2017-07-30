@@ -1,18 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from "lodash";
+import {GetService} from "../../services/get.service"
 
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  providers:[GetService],
 })
 export class DashboardComponent implements OnInit {
   private today: any;
+  private adate:any;
   private symptom: string;
+  private symptoms:any;
   private symptomsArr: Array<string>;
-  constructor() {
+  constructor(private getservice:GetService) {
     this.findTodaysDate();
     this.symptomsArr = [];
+    this.getservice.getSymptoms().subscribe(data=>this.fetchSymptoms(data));
+  }
+  fetchSymptoms(data:any){
+    var data1=(JSON.parse(data._body));
+    this.symptoms=data1;
+    console.log(this.symptoms);
+
   }
 
   ngOnInit() {

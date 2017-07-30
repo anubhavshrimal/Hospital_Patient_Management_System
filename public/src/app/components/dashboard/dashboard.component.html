@@ -175,7 +175,7 @@
     <p>Select a date and we'll schedule your appointments for that day.</p>
     <div class="row">
       <div class="input-field col s5">
-        <input id="appointment-date" type="date" min='{{today}}'>
+        <input id="appointment-date" type="date" min='{{today}}' [(ngModel)]="adate">
       </div>
     </div>
 
@@ -184,11 +184,8 @@
       <div class="input-field col s5">
         <input mdInput [(ngModel)]="symptom" (keyup.enter)="addSymptom()" placeholder="Symptoms:" list="symptoms" name="symptoms">
         <datalist id="symptoms">
-          <option value="Cold">
-            <option value="Flu">
-              <option value="Fever">
-                <option value="Head ache">
-                  <option value="Stomach ache">
+          <option value="{{i.name}}" *ngFor="let i of symptoms">
+
         </datalist>
       </div>
     </div>
