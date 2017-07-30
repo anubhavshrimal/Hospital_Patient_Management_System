@@ -1,14 +1,14 @@
-<nav permissions="['r', 'c', 'a', 'p', 'd']">
+<nav *ngIf="userData.userType == 'd' || userData.userType == 'c'|| userData.userType == 'a'|| userData.userType == 'r'|| userData.userType == 'p'">
   <div class="nav-wrapper blue-grey">
     <a href="#!" class="brand-logo center">PGI Hospital</a>
     <a href="#" materialize='sideNav' data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><a routerLink="/search"><i class="material-icons left">search</i>Search</a></li>
-      <li><a routerLink="/login"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+      <li><a (click)="logout()"><i class="material-icons left">exit_to_app</i>Logout</a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li><a routerLink="/search"><i class="material-icons">search</i>Search</a></li>
-      <li><a routerLink="/login"><i class="material-icons">exit_to_app</i>Logout</a></li>
+      <li><a (click)="logout()"><i class="material-icons">exit_to_app</i>Logout</a></li>
     </ul>
   </div>
 </nav>

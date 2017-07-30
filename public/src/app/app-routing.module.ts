@@ -7,11 +7,11 @@ import { NewPrescriptionComponent } from "./components/new-prescription/new-pres
 import { PatientSummaryComponent } from './components/patient-summary/patient-summary.component';
 import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
-    // {
-    //     path: '',
-    //     redirectTo: '/login',
-    //     pathMatch: 'full'
-    // },
+    {
+        path: '',
+        redirectTo: '/login',
+        pathMatch: 'full'
+    },
     {
         path: 'signup',
         component: SignupComponent

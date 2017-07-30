@@ -1,42 +1,46 @@
 <div>
   <div class="row">
     <div class="col s3 center">
-      <img width="150px" class="borders b2" src="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46">
+      <img style="border: 1px solid" width="150px" class="borders b2" src="http://192.168.1.103:3000/dataStore/12e23ce8dec0add0ec71cd6f41ee645f">
     </div>
     <div class="col s5">
-      <h3 class="row">Anubhav Shrimal</h3>
-      <div class="row flow-text">21 years | 240 Karni Vihar, Jaipur</div>
+      <h3 class="row">{{summmary.name.firstName}} {{summmary.name.lastName}}</h3>
+      <div class="row flow-text">{{summary.age}} years | {{summary.userName}}</div>
     </div>
     <div class="col s4">
       <div class="row">
         <button class="btn ">Create new record</button>
       </div>
-      <div class="row">
+      <!--<div class="row">
         <button class="btn ">View All records</button>
-      </div>
+      </div>-->
     </div>
   </div>
 
   <div class="row">
     <div class="col s8">
       <ul class="collapsible popout" data-collapsible="expandable">
-        <li>
-          <div class="collapsible-header black white-text active"><i class="material-icons">folder</i>First</div>
+        <li *ngFor="let record of summary.records">
+          <div class="collapsible-header black white-text active"><i class="material-icons">folder</i>{{record.name}}</div>
           <div class="collapsible-body">
             <button class="btn">Create new prescription</button>
             <ul class="collapsible" data-collapsible="expandable">
-              <li>
-                <div class="collapsible-header active blue"><i class="material-icons">description</i>First</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+              <li *ngFor="let pres of record.prescriptions">
+                <div class="collapsible-header active blue"><i class="material-icons">description</i>{{pres.name}}</div>
+                <div class="collapsible-body">
+                  <p>{{pres.date}}</p>
+                  <p>Medicines</p>
+                  <p *ngFor="let i of pres.medicines">{{i}}</p>
+                </div>
               </li>
-              <li>
+              <!--<li>
                 <div class="collapsible-header blue"><i class="material-icons">description</i>Second</div>
                 <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
               </li>
               <li>
                 <div class="collapsible-header blue"><i class="material-icons">description</i>Third</div>
                 <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-              </li>
+              </li>-->
             </ul>
           </div>
         </li>
