@@ -11,10 +11,13 @@ import {PostService} from "../../services/post.service";
 export class SignupComponent {
   formData: FormData;
   help:string;
+  validated:boolean;
 
   constructor(private postservice:PostService) {
     this.formData = new FormData();
-    this.help='hello'
+    this.help='hello';
+    this.validated=true;
+
   }
 
   submit() {
@@ -22,16 +25,17 @@ export class SignupComponent {
     if(e=='true'){this.formData.maritalStatus=true}
     else{this.formData.maritalStatus=false}
     this.formData.gender=(<HTMLInputElement>(document.getElementById('gender'))).value;
-    this.formData.patientDetails.title=(<HTMLInputElement>(document.getElementById('title'))).value;
-    if (this.formData.patientDetails.firstName != '') {
-      if (this.formData.patientDetails.lastName != '') {
-        if (this.formData.patientDetails.title != '') {
+    this.formData.name.title=(<HTMLInputElement>(document.getElementById('title'))).value;
+    if (this.formData.name.firstName != '') {
+      if (this.formData.name.lastName != '') {
+        if (this.formData.name.title != '') {
           if (this.formData.password != '') {
             if (this.formData.userName != '') {
               if (this.formData.gender != '') {
                 if (this.formData.email != '') {
-                  if (this.formData.contactDetails.mobile != null) {
+                  if (this.formData.contacts.mobile != null) {
                     if (this.formData.age != null) {
+                      this.validated=true;
                     }
                   }
                 }
@@ -42,8 +46,13 @@ export class SignupComponent {
         }
       }
     }
-    console.log(this.formData);
-    this.postservice.postdetails(this.formData).subscribe();
+    else{
+      this.validated=false;
+      alert('fill all details')
+    }
+    if(this.validated) {
+      this.postservice.postdetails(this.formData).subscribe(data => console.log(data));
+    }
 
   }
 }

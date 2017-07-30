@@ -9,7 +9,10 @@ export class GetService {
   }
   getSymptoms(){
     console.log('here');
-    return this.http.get('http://192.168.1.102:3000/dataStore/medicalConditions');
+    return this.http.get('http://192.168.1.103:3000/dataStore/medicalConditions');
+  }
+  getPatient(){
+    return this.http.get('http://192.168.1.103:3000/patient/view/raghusingh');
   }
 
 

@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
   }
   loginresponse(data:any){
     var data1=JSON.parse(data._body);
-    if(data1=='error'){
+    console.log(data1)
+    if(data1.message=='error'){
       this.found=false;
     }
     else {

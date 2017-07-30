@@ -17,15 +17,15 @@
             </select>
           </div>
           <div class="input-field col s12 m2">
-            <input [(ngModel)]="formData.patientDetails.firstName" name="help" id="first_name" type="text" class="validate" >
+            <input [(ngModel)]="formData.name.firstName" name="help" id="first_name" type="text" class="validate" >
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col s12 m1">
-            <input [(ngModel)]="formData.patientDetails.middleName" id="middle_name" type="text" class="validate">
+            <input [(ngModel)]="formData.name.middleName" id="middle_name" type="text" class="validate">
             <label for="middle_name">Middle Name</label>
           </div>
           <div class="input-field col s12 m2">
-            <input [(ngModel)]="formData.patientDetails.lastName" id="last_name" type="text" class="validate">
+            <input [(ngModel)]="formData.name.lastName" id="last_name" type="text" class="validate">
             <label for="last_name">Last Name</label>
           </div>
         </div>
@@ -107,11 +107,11 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m3">
-            <input id="mobile_no" [(ngModel)]="formData.contactDetails.mobile" type="text" class="validate">
+            <input id="mobile_no" [(ngModel)]="formData.contacts.mobile" type="text" class="validate">
             <label for="mobile_no">Mobile No.</label>
           </div>
           <div class="input-field col s12 m3">
-            <input id="other_mobile_no" [(ngModel)]="formData.contactDetails.other" type="text" class="validate">
+            <input id="other_mobile_no" [(ngModel)]="formData.contacts.other" type="text" class="validate">
             <label for="other_mobile_no">Alternate Mobile No.</label>
           </div>
         </div>
@@ -166,12 +166,12 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m3">
-            <input id="home_number" [(ngModel)]="formData.contactDetails.home" type="text" class="validate">
-            <label for="home_number">Home Contact</label>
+            <input id="home_number" [(ngModel)]="formData.contacts.home" type="text" class="validate">
+            <label for="home_number">Home contacts</label>
           </div>
           <div class="input-field col s12 m3">
-            <input id="office_number" type="text" [(ngModel)]="formData.contactDetails.office" class="validate">
-            <label for="blood_group">Office Contact</label>
+            <input id="office_number" type="text" [(ngModel)]="formData.contacts.office" class="validate">
+            <label for="blood_group">Office contacts</label>
           </div>
         </div>
 

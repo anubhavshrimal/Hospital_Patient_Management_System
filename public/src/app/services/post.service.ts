@@ -11,7 +11,7 @@ export class PostService {
     let form1=new FormData();
     form1=this.createFormData(details)
     let header=new Headers();
-    return this.http.post('http://192.168.1.101:3000/patient',form1,header);
+    return this.http.post('http://192.168.1.103:3000/patient',form1,header);
 
   }
   login(pdetails:any){

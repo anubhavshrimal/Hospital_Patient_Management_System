@@ -41,8 +41,8 @@ export class FormData {
   userType:string;
   verified:boolean;
   fatherName:string;
-  contactDetails:ContactDetals;
-  patientDetails:PDetails;
+  contacts:ContactDetals;
+  name:PDetails;
   address:Address;
   userName: string;
   password: string;
@@ -52,16 +52,17 @@ export class FormData {
   maritalStatus: boolean;
   dob: Date;
   displayPicture: string;
-  bloodGroup:string
+  bloodGroup:string;
+
   constructor(){
     this.bloodGroup='';
     this.insuranceNo='';
     this.fatherName='';
     this.userType='patient';
     this.verified=false;
-    this.contactDetails=new ContactDetals();
+    this.contacts=new ContactDetals();
     this.address=new Address();
-    this.patientDetails=new PDetails();
+    this.name=new PDetails();
     this.age=null;
     this.email='';
     this.gender='';
