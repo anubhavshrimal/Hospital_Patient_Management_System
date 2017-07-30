@@ -5,20 +5,27 @@
     <h1 class="indigo-text center-align">Register</h1>
     <div class="row center">
 
-      <form class="col s12 ">
+      <div class="col s12 ">
 
         <div class="row">
           <div class="input-field col s3 m3 "></div>
-          <div class="input-field col s12 m2">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+          <div class="input-field col m1">
+            <select materialize="material_select" id="title">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="Male">Mr</option>
+              <option value="Female">Mrs</option>
+            </select>
           </div>
           <div class="input-field col s12 m2">
-            <input id="middle_name" type="text" class="validate">
+            <input [(ngModel)]="formData.patientDetails.firstName" name="help" id="first_name" type="text" class="validate" >
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s12 m1">
+            <input [(ngModel)]="formData.patientDetails.middleName" id="middle_name" type="text" class="validate">
             <label for="middle_name">Middle Name</label>
           </div>
           <div class="input-field col s12 m2">
-            <input id="last_name" type="text" class="validate">
+            <input [(ngModel)]="formData.patientDetails.lastName" id="last_name" type="text" class="validate">
             <label for="last_name">Last Name</label>
           </div>
         </div>
@@ -27,7 +34,7 @@
         <div class="row">
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m6">
-            <input id="User_name" type="text" class="validate">
+            <input [(ngModel)]="formData.userName" id="User_name" type="text" class="validate">
             <label for="User_name">User Name</label>
           </div>
         </div>
@@ -35,7 +42,7 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m6">
-            <input id="father_name" type="text" class="validate">
+            <input [(ngModel)]="formData.fatherName" id="father_name" type="text" class="validate">
             <label for="father_name">Father Name</label>
           </div>
         </div>
@@ -44,7 +51,7 @@
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m3">
 
-            <select materialize="material_select">
+            <select materialize="material_select" id="gender">
               <option value="" disabled selected>Choose your option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -55,7 +62,7 @@
 
           <div class="input-field col s12 m3">
 
-            <select materialize="material_select">
+            <select materialize="material_select" id="maritialstatus">
               <option value="" disabled selected>Choose your option</option>
               <option value="true">Married</option>
               <option value="false">UnMarried</option>
@@ -75,7 +82,7 @@
         <div class="row">
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m6">
-            <input id="Password" type="text" class="validate">
+            <input [(ngModel)]="formData.password" id="Password" type="text" class="validate">
             <label for="Password">Password</label>
           </div>
         </div>
@@ -84,7 +91,7 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m6">
-            <input id="email" type="email" class="validate">
+            <input [(ngModel)]="formData.email" id="email" type="email" class="validate">
             <label for="email" data-error="wrong" data-success="right">Email</label>
           </div>
         </div>
@@ -92,7 +99,7 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m6">
-            <input id="insurance_no" type="text" class="validate">
+            <input [(ngModel)]="formData.insuranceNo" id="insurance_no" type="text" class="validate">
             <label for="insurance_no">Insurance Number(If Any)</label>
           </div>
         </div>
@@ -100,11 +107,11 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m3">
-            <input id="mobile_no" type="text" class="validate">
+            <input id="mobile_no" [(ngModel)]="formData.contactDetails.mobile" type="text" class="validate">
             <label for="mobile_no">Mobile No.</label>
           </div>
           <div class="input-field col s12 m3">
-            <input id="other_mobile_no" type="text" class="validate">
+            <input id="other_mobile_no" [(ngModel)]="formData.contactDetails.other" type="text" class="validate">
             <label for="other_mobile_no">Alternate Mobile No.</label>
           </div>
         </div>
@@ -113,11 +120,11 @@
         <div class="row">
           <div class="input-field col s0 m3 "></div>
           <div class="input-field col s3 m1">
-            <input id="plot_no" type="text" class="validate">
+            <input id="plot_no"[(ngModel)]="formData.address.plotno" type="text" class="validate">
             <label for="plot_no">Plot No.</label>
           </div>
           <div class="input-field col s7 m5">
-            <input id="street" type="text" class="validate">
+            <input id="street" type="text" [(ngModel)]="formData.address.street" class="validate">
             <label for="street">Street</label>
           </div>
         </div>
@@ -125,11 +132,11 @@
         <div class="row">
           <div class="input-field col m3 "></div>
           <div class="input-field col s3 m1">
-            <input id="district" type="text" class="validate">
+            <input id="district" type="text" [(ngModel)]="formData.address.district" class="validate">
             <label for="district">District</label>
           </div>
           <div class="input-field col s7 m5">
-            <input id="post_office" type="text" class="validate">
+            <input id="post_office" type="text"[(ngModel)]="formData.address.POBox" class="validate">
             <label for="post_office">PostOffice</label>
           </div>
         </div>
@@ -137,7 +144,7 @@
         <div class="row">
           <div class="input-field col m3 "></div>
           <div class="input-field col s10 m6">
-            <input id="state" type="text" class="validate">
+            <input id="state" type="text" [(ngModel)]="formData.address.state"class="validate">
             <label for="state">State</label>
           </div>
         </div>
@@ -146,11 +153,11 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m3">
-            <input id="age" type="text" class="validate">
+            <input id="age" type="text" [(ngModel)]="formData.age" class="validate">
             <label for="age">Age</label>
           </div>
           <div class="input-field col s12 m3">
-            <input id="blood_group" type="text" class="validate">
+            <input id="blood_group" [(ngModel)]="formData.bloodGroup" type="text" class="validate">
             <label for="blood_group">Blood Group</label>
           </div>
         </div>
@@ -159,11 +166,11 @@
 
           <div class="input-field col s3 m3 "></div>
           <div class="input-field col s12 m3">
-            <input id="home_number" type="text" class="validate">
+            <input id="home_number" [(ngModel)]="formData.contactDetails.home" type="text" class="validate">
             <label for="home_number">Home Contact</label>
           </div>
           <div class="input-field col s12 m3">
-            <input id="office_number" type="text" class="validate">
+            <input id="office_number" type="text" [(ngModel)]="formData.contactDetails.office" class="validate">
             <label for="blood_group">Office Contact</label>
           </div>
         </div>
@@ -202,13 +209,13 @@
 
        <div class="row">
          <div class="input-field col s4 m12">
-           <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+           <button (click)="submit()" class="btn waves-effect waves-light" type="submit" name="action">Submit
              <i class="material-icons right">send</i>
            </button>
 
          </div>
        </div>
 
-      </form>
+      </div>
     </div>
   </div>

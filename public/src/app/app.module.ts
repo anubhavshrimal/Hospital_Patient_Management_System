@@ -12,6 +12,7 @@ import { PermissionsDirective } from './directives/permissions.directive';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PatientSummaryComponent } from './components/patient-summary/patient-summary.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PatientSummaryComponent } from './components/patient-summary/patient-su
     PermissionsDirective,
     DashboardComponent,
     NavbarComponent,
-    PatientSummaryComponent
+    PatientSummaryComponent,
+    AppointmentComponent
   ],
   imports: [
     AppRoutingModule,
