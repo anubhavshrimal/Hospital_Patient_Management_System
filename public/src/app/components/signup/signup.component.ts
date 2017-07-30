@@ -43,7 +43,7 @@ export class SignupComponent {
       }
     }
     console.log(this.formData);
-    this.postservice.postdetails(this.formData);
+    this.postservice.postdetails(this.formData).subscribe();
 
   }
 }

@@ -18,21 +18,21 @@
 
           <div class='row'>
             <div class='input-field col s12'>
-              <input class='validate' [(ngModel)]="email" type='email' name='email' id='email' />
+              <input class='validate' [(ngModel)]="patientlogin.email" type='email' name='email' id='email' />
               <label for='email'>Enter your email</label>
             </div>
           </div>
 
           <div class='row'>
             <div class='input-field col s12'>
-              <input class='validate' type='password' [(ngModel)]="password" name='password' id='password' />
+              <input class='validate' type='password' [(ngModel)]="patientlogin.password" name='password' id='password' />
               <label for='password'>Enter your password</label>
             </div>
             <label style='float: right;'>
               <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
             </label>
           </div>
-
+          <div style="color: red" *ngIf="!found">Invalid UserName or Password</div>
           <br />
           <div>
             <div class='row'>
