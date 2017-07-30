@@ -1,10 +1,10 @@
 <div>
   <div class="row">
     <div class="col s3 center">
-      <img style="border: 1px solid" width="150px" class="borders b2" src="http://192.168.1.103:3000/dataStore/12e23ce8dec0add0ec71cd6f41ee645f">
+      <img style="border: 1px solid" width="150px" class="borders b2" src="http://192.168.1.103:3000/dataStore/{{summary.displayPicture}}">
     </div>
     <div class="col s5">
-      <h3 class="row">{{summmary.name.firstName}} {{summmary.name.lastName}}</h3>
+      <h3 class="row">{{summary.name.firstName}} {{summary.name.lastName}}</h3>
       <div class="row flow-text">{{summary.age}} years | {{summary.userName}}</div>
     </div>
     <div class="col s4">
@@ -21,12 +21,12 @@
     <div class="col s8">
       <ul class="collapsible popout" data-collapsible="expandable">
         <li *ngFor="let record of summary.records">
-          <div class="collapsible-header black white-text active"><i class="material-icons">folder</i>{{record.name}}</div>
+          <div class="collapsible-header black white-text"><i class="material-icons">folder</i>{{record.name}}</div>
           <div class="collapsible-body">
             <button class="btn">Create new prescription</button>
             <ul class="collapsible" data-collapsible="expandable">
               <li *ngFor="let pres of record.prescriptions">
-                <div class="collapsible-header active blue"><i class="material-icons">description</i>{{pres.name}}</div>
+                <div class="collapsible-header blue"><i class="material-icons">description</i>{{pres.name}}</div>
                 <div class="collapsible-body">
                   <p>{{pres.date}}</p>
                   <p>Medicines</p>
@@ -72,7 +72,11 @@
 
         <li>
           <div class="collapsible-header active black white-text"><i class="material-icons">error</i>Diseases</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-body">
+            <ul class="collection">
+              <li class="collection-item" *ngFor="let d of summary.diseases">{{d}}</li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

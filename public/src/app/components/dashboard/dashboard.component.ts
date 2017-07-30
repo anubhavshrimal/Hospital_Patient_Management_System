@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as _ from "lodash";
 import {GetService} from "../../services/get.service"
 import {PostService} from "../../services/post.service"
@@ -15,16 +16,31 @@ export class DashboardComponent implements OnInit {
   private symptoms:any;
   private symptomsArr: Array<string>;
   private userData:Object;
+  private docsList: Array<Object>;
 
-  constructor(private getservice:GetService,private postservice:PostService) {
+  constructor(private getservice:GetService,private postservice:PostService, private router: Router) {
     this.findTodaysDate();
     this.symptomsArr = [];
+    this.docsList = [];
     this.getservice.getSymptoms().subscribe(data=>this.fetchSymptoms(data));
+
+    this.getservice.getDoctor().subscribe(data=>this.doctordata(data));
   }
   fetchSymptoms(data:any){
     var data1=(JSON.parse(data._body));
     this.symptoms=data1;
 
+  }
+  
+  doctordata(data:any){
+    var data1=JSON.parse(data._body);
+    console.log(data1);
+    for(var i in data1){
+      console.log(data1[i].userName)
+      this.docsList.push({"name": data1[i].name.title+' '+data1[i].name.firstName+' '+data1[i].name.lastName,
+                          "specialization": data1[i].specialization.name})
+    }
+    console.log(this.docsList)
   }
 
   ngOnInit() {
@@ -33,6 +49,10 @@ export class DashboardComponent implements OnInit {
 
   applyLeave() {
 
+  }
+
+  patienSummary(){
+    this.router.navigate([`/patient-summary/raghusingh`]);
   }
 
   bookAppointment() {

@@ -46,6 +46,9 @@
           </div>
         </div>
       </div>
+      <div class="row center" *ngIf="userData.userType == 'p'">
+        <img src="http://192.168.1.103:3000/qrcodes/{{userData._id}}.png">
+      </div>
     </div>
 
     <div class="col s12 m5">
@@ -59,11 +62,11 @@
       </div>
       <div class="row">
         <ul class="collection" style="overflow: scroll; height: 450px">
-          <li class="collection-item avatar">
+          <li class="collection-item avatar" *ngFor="let a of userData.appointments">
             <img src="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46"
               alt="" class="circle">
             <span class="title">Dr. Deepak Lahoty</span>
-            <p>Cardiologist <br> 30/07/2017
+            <p>Cardiologist <br> {{a.date | date: 'longDate'}} ({{a.time | date: 'shortTime'}})
             </p>
             <div class="secondary-content">
               <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
@@ -144,7 +147,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <a routerLink="/patient-summary" class="modal-action modal-close waves-effect waves-green btn-flat">Next</a>
+    <a (click)="patienSummary()" class="modal-action modal-close waves-effect waves-green btn-flat">Next</a>
   </div>
 </div>
 

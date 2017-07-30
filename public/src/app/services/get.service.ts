@@ -15,7 +15,8 @@ export class GetService {
     return this.http.get('http://192.168.1.103:3000/patient/view/raghusingh');
   }
 
-
-
+  getDoctor(){
+    return this.http.get('http://192.168.1.103:3000/doctors')
+  }
 
 }
