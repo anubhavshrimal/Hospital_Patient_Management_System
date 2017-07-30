@@ -1,0 +1,92 @@
+<div class="container">
+  <h3>Prescription</h3>
+  <div class="row">
+    <div class="col s4 flow-text">Anubhav Shrimal</div>
+    <div class="col s4 flow-text">Record Id: 234234</div>
+    <div class="col s4 flow-text">Appointment Id: 234234</div>
+  </div>
+  <div class="row">
+    <div class="col s8">
+      <div class="row">
+        <div class="input-field col s8">
+          <input mdInput [(ngModel)]="symptom" (keyup.enter)="addSymptom()" placeholder="Symptoms:" list="symptoms" name="symptoms">
+          <datalist id="symptoms">
+            <option value="Cold">
+              <option value="Flu">
+                <option value="Fever">
+                  <option value="Head ache">
+                    <option value="Stomach ache">
+          </datalist>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" *ngFor="let tag of symptomsArr">
+          {{tag}}
+          <i class="close material-icons" (click)="removeSymptom(tag)">close</i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s8">
+          <input mdInput [(ngModel)]="medicine" (keyup.enter)="addMedicine()" placeholder="Medicines:" list="medicines" name="medicines">
+          <datalist id="medicines">
+            <option value="Paracetamol">
+              <option value="DieCold">
+                <option value="Forilax">
+                  <option value="Cortizox">
+                    <option value="Impycid">
+          </datalist>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" *ngFor="let tag of medicinesArr">
+          {{tag}}
+          <i class="close material-icons" (click)="removeMedicine(tag)">close</i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s8">
+          <input mdInput [(ngModel)]="test" (keyup.enter)="addTest()" placeholder="Tests:" list="tests" name="tests">
+          <datalist id="tests">
+            <option value="CAT scan">
+              <option value="Blood Test">
+                <option value="Urine Test">
+          </datalist>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" *ngFor="let tag of testsArr">
+          {{tag}}
+          <i class="close material-icons" (click)="removeTest(tag)">close</i>
+        </div>
+      </div>
+
+    </div>
+    <div class="col s4">
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+          <div class="collapsible-header active black white-text"><i class="material-icons">bubble_chart</i>Allergies</div>
+          <div class="collapsible-body">
+            <ul class="collection">
+              <li class="collection-item">Pollen</li>
+              <li class="collection-item">Dust</li>
+              <li class="collection-item">Dogs</li>
+              <li class="collection-item">Alvin</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="collapsible-header active black white-text"><i class="material-icons">error</i>Diseases</div>
+          <div class="collapsible-body">
+            <ul class="collection">
+              <li class="collection-item">Diabetes</li>
+              <li class="collection-item">Asthma</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

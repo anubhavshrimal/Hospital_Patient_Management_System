@@ -1,2 +1,7 @@
 # Hospital_Patient_Management_System
-Infosys Chandigarh Hackathon 2017 
+
+run `npm install`
+in public folder
+run `npm install`
+to run the serve `npm start` in main folder
+
