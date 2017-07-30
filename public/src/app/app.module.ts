@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PatientSummaryComponent } from './components/patient-summary/patient-summary.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
+import { NewPrescriptionComponent } from './components/new-prescription/new-prescription.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppointmentComponent } from './components/appointment/appointment.compo
     DashboardComponent,
     NavbarComponent,
     PatientSummaryComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    NewPrescriptionComponent
   ],
   imports: [
     AppRoutingModule,
