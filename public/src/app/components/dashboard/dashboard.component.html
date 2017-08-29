@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="row center" *ngIf="userData.userType == 'p'">
-        <img src="http://192.168.1.103:3000/qrcodes/{{userData._id}}.png">
+        <img src="https://hpmanage.herokuapp.com/qrcodes/{{userData._id}}.png">
       </div>
     </div>
 
@@ -62,11 +62,11 @@
       </div>
       <div class="row">
         <ul class="collection" style="overflow: scroll; height: 450px">
-          <li class="collection-item avatar" *ngFor="let a of userData.appointments">
-            <img src="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46"
+          <li class="collection-item avatar">
+            <img src="https://scontent.fjai1-1.fna.fbcdn.net/v/t1.0-9/14639848_1434515443355496_7488037473453582817_n.jpg?oh=52c1817b4afd7b86d200b8369b212334&oe=5A367DBF"
               alt="" class="circle">
             <span class="title">Dr. Deepak Lahoty</span>
-            <p>Cardiologist <br> {{a.date | date: 'longDate'}} ({{a.time | date: 'shortTime'}})
+            <p>Cardiologist <br> 16 August 2017 (15:00)
             </p>
             <div class="secondary-content">
               <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
@@ -78,58 +78,94 @@
             </div>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle">folder</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
+            <img src="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46"
+              alt="" class="circle">
+            <span class="title">Dr. Anubhav Shrimal</span>
+            <p>Dermatologist <br> 20 August 2017 (13:00)
             </p>
+            <div class="secondary-content">
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Reschedule"><i class="material-icons">alarm</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'c'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="View Patient Records"><i class="material-icons">visibility</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+            </div>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle green">insert_chart</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
+            <img src="https://scontent.fjai1-1.fna.fbcdn.net/v/t1.0-9/15698284_943169802494674_170960021349459246_n.jpg?oh=06a915faee6ae46bba9abadd002f5816&oe=5A2F7AA2"
+              alt="" class="circle">
+            <span class="title">Dr. Anmol Madaan</span>
+            <p>Cardiac electrophysiologist <br> 21 August 2017 (18:00)
             </p>
+            <div class="secondary-content">
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Reschedule"><i class="material-icons">alarm</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'c'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="View Patient Records"><i class="material-icons">visibility</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+            </div>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle red">play_arrow</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
+            <img src="https://scontent.fjai1-1.fna.fbcdn.net/v/t1.0-9/16508673_1640109579349351_9179356261187628375_n.jpg?oh=d47e9803cc3ef33314c65bedee104d6e&oe=59F4C0FE"
+              alt="" class="circle">
+            <span class="title">Dr. Anupam Juniwal</span>
+            <p>Anesthesiologist <br> 25 August 2017 (10:00)
             </p>
+            <div class="secondary-content">
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Reschedule"><i class="material-icons">alarm</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'c'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="View Patient Records"><i class="material-icons">visibility</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+            </div>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle">folder</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
+            <img src="https://scontent.fjai1-1.fna.fbcdn.net/v/t1.0-9/16427337_1360397460648363_3413439534022539504_n.jpg?oh=d9a5d8a424aff300af74cab5bd90d229&oe=59F1EE5B"
+              alt="" class="circle">
+            <span class="title">Dr. Akshay Katare</span>
+            <p>Pediatrician <br> 26 August 2017 (17:00)
             </p>
+            <div class="secondary-content">
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Reschedule"><i class="material-icons">alarm</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'c'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="View Patient Records"><i class="material-icons">visibility</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+            </div>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle green">insert_chart</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
+            <img src="https://scontent.fjai1-1.fna.fbcdn.net/v/t1.0-9/15192690_1291443850877058_2563131294560835773_n.jpg?oh=b2b404439b632083f4b40a8f4e4ff2a0&oe=5A242F85"
+              alt="" class="circle">
+            <span class="title">Dr. Deepak Lahoty</span>
+            <p>Cardiologist <br> 16 August 2017 (15:00)
             </p>
+            <div class="secondary-content">
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Reschedule"><i class="material-icons">alarm</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'c'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="View Patient Records"><i class="material-icons">visibility</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+            </div>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle red">play_arrow</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
+            <img src="https://lh3.googleusercontent.com/-xIMjld9GFZI/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpy2xJpFj8EceCOlKYclXgiBRTl7Q/mo/photo.jpg?sz=46"
+              alt="" class="circle">
+            <span class="title">Dr. Deepak Lahoty</span>
+            <p>Cardiologist <br> 16 August 2017 (15:00)
             </p>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle">folder</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
-            </p>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle green">insert_chart</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
-            </p>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle red">play_arrow</i>
-            <span class="title">Title</span>
-            <p>First Line <br> Second Line
-            </p>
+            <div class="secondary-content">
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Reschedule"><i class="material-icons">alarm</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'c'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="View Patient Records"><i class="material-icons">visibility</i></a>
+              <a href="#!" *ngIf="userData.userType == 'd' || userData.userType == 'p'" class="material-icons tooltipped" materialize="tooltip" data-position="bottom" data-delay="50"
+                data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+            </div>
           </li>
         </ul>
       </div>
