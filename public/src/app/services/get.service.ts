@@ -9,14 +9,14 @@ export class GetService {
   }
   getSymptoms(){
     console.log('here');
-    return this.http.get('http://192.168.1.103:3000/dataStore/medicalConditions');
+    return this.http.get('https://hpmanage.herokuapp.com/dataStore/medicalConditions');
   }
   getPatient(){
-    return this.http.get('http://192.168.1.103:3000/patient/view/raghusingh');
+    return this.http.get('https://hpmanage.herokuapp.com/patient/view/raghusingh');
   }
 
   getDoctor(){
-    return this.http.get('http://192.168.1.103:3000/doctors')
+    return this.http.get('https://hpmanage.herokuapp.com/doctors')
   }
 
 }
