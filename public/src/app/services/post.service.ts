@@ -11,7 +11,7 @@ export class PostService {
     let form1=new FormData();
     form1=this.createFormData(details)
     let header=new Headers();
-    return this.http.post('http://192.168.1.103:3000/patient',form1,header);
+    return this.http.post('https://hpmanage.herokuapp.com/patient',form1,header);
 
   }
   login(pdetails:any){
@@ -19,7 +19,7 @@ export class PostService {
     let form=new FormData();
     form=this.createFormData(pdetails);
     let header=new Headers()
-    return this.http.post('http://192.168.1.102:3000/login',form,{headers:header});
+    return this.http.post('https://hpmanage.herokuapp.com/login',form,{headers:header});
   }
   bookappointment(d:any,s:any){
     var form=new FormData();
@@ -34,7 +34,7 @@ export class PostService {
     form.append('date',d);
     form.append('userName',userName);
     form.append('symptoms',s);
-    return this.http.post('http://192.168.1.102:3000/appointments',form,{headers:header})
+    return this.http.post('https://hpmanage.herokuapp.com/appointments',form,{headers:header})
 }
 
   createFormData(object: Object, form?: FormData, namespace?: string): FormData {
